@@ -1,0 +1,45 @@
+$date
+	Mon Sep 02 03:53:31 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module half_add_tester $end
+$var wire 1 ! S $end
+$var wire 1 " Cout $end
+$var parameter 32 # stop_time $end
+$var reg 1 $ Ain $end
+$var reg 1 % Bin $end
+$scope module UUT $end
+$var wire 1 $ Ain $end
+$var wire 1 % Bin $end
+$var wire 1 " Cout $end
+$var wire 1 ! S $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b110010 #
+$end
+#0
+$dumpvars
+0%
+0$
+0"
+0!
+$end
+#10
+1!
+1%
+#20
+0%
+1$
+#30
+0!
+1"
+1%
+#50

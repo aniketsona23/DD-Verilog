@@ -1,0 +1,136 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002019500da20 .scope module, "full_unit_Add_test" "full_unit_Add_test" 2 3;
+ .timescale 0 0;
+P_0000020195008f30 .param/l "stop_time" 0 2 8, +C4<00000000000000000000000001010000>;
+v0000020194f63e70_0 .var "Ain", 0 0;
+v0000020194f63470_0 .var "Bin", 0 0;
+v0000020194f63330_0 .var "Cin", 0 0;
+v0000020194f63dd0_0 .net "Cout", 0 0, L_0000020194f066e0;  1 drivers
+v0000020194f63510_0 .net "S", 0 0, L_0000020194f06ad0;  1 drivers
+S_000002019500dbb0 .scope module, "UUT" "full_adder_unit" 2 10, 3 3 0, S_000002019500da20;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "Ain";
+    .port_info 1 /INPUT 1 "Bin";
+    .port_info 2 /INPUT 1 "Cin";
+    .port_info 3 /OUTPUT 1 "S";
+    .port_info 4 /OUTPUT 1 "Cout";
+L_0000020194f066e0 .functor OR 1, L_0000020194f06910, L_0000020194f06600, C4<0>, C4<0>;
+v0000020194f16420_0 .net "Ain", 0 0, v0000020194f63e70_0;  1 drivers
+v0000020194f164c0_0 .net "Bin", 0 0, v0000020194f63470_0;  1 drivers
+v0000020194f06dc0_0 .net "Cin", 0 0, v0000020194f63330_0;  1 drivers
+v0000020194f06e60_0 .net "Cout", 0 0, L_0000020194f066e0;  alias, 1 drivers
+v0000020194f635b0_0 .net "S", 0 0, L_0000020194f06ad0;  alias, 1 drivers
+v0000020194f630b0_0 .net "o1", 0 0, L_0000020194f068a0;  1 drivers
+v0000020194f638d0_0 .net "w1", 0 0, L_0000020194f06600;  1 drivers
+v0000020194f631f0_0 .net "w2", 0 0, L_0000020194f06910;  1 drivers
+S_0000020194f16150 .scope module, "HA1" "half_adder" 3 8, 4 1 0, S_000002019500dbb0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "Ain";
+    .port_info 1 /INPUT 1 "Bin";
+    .port_info 2 /OUTPUT 1 "S";
+    .port_info 3 /OUTPUT 1 "Cout";
+L_0000020194f068a0 .functor XOR 1, v0000020194f63e70_0, v0000020194f63470_0, C4<0>, C4<0>;
+L_0000020194f06600 .functor AND 1, v0000020194f63e70_0, v0000020194f63470_0, C4<1>, C4<1>;
+v0000020194ee3210_0 .net "Ain", 0 0, v0000020194f63e70_0;  alias, 1 drivers
+v0000020194ee2fb0_0 .net "Bin", 0 0, v0000020194f63470_0;  alias, 1 drivers
+v0000020194f04d90_0 .net "Cout", 0 0, L_0000020194f06600;  alias, 1 drivers
+v0000020194f06090_0 .net "S", 0 0, L_0000020194f068a0;  alias, 1 drivers
+S_0000020194f14b70 .scope module, "HA2" "half_adder" 3 9, 4 1 0, S_000002019500dbb0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "Ain";
+    .port_info 1 /INPUT 1 "Bin";
+    .port_info 2 /OUTPUT 1 "S";
+    .port_info 3 /OUTPUT 1 "Cout";
+L_0000020194f06ad0 .functor XOR 1, L_0000020194f068a0, v0000020194f63330_0, C4<0>, C4<0>;
+L_0000020194f06910 .functor AND 1, L_0000020194f068a0, v0000020194f63330_0, C4<1>, C4<1>;
+v000002019500dd40_0 .net "Ain", 0 0, L_0000020194f068a0;  alias, 1 drivers
+v000002019500dde0_0 .net "Bin", 0 0, v0000020194f63330_0;  alias, 1 drivers
+v0000020194f162e0_0 .net "Cout", 0 0, L_0000020194f06910;  alias, 1 drivers
+v0000020194f16380_0 .net "S", 0 0, L_0000020194f06ad0;  alias, 1 drivers
+    .scope S_000002019500da20;
+T_0 ;
+    %delay 80, 0;
+    %vpi_call 2 12 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_000002019500da20;
+T_1 ;
+    %vpi_call 2 14 "$dumpfile", "out.vsd" {0 0 0};
+    %vpi_call 2 15 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002019500da20 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020194f63e70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020194f63470_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020194f63330_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020194f63e70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020194f63470_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020194f63330_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020194f63e70_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020194f63470_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020194f63330_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020194f63e70_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020194f63470_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020194f63330_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020194f63e70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020194f63470_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020194f63330_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020194f63e70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020194f63470_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020194f63330_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020194f63e70_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020194f63470_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020194f63330_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020194f63e70_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020194f63470_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020194f63330_0, 0, 1;
+    %end;
+    .thread T_1;
+    .scope S_000002019500da20;
+T_2 ;
+    %vpi_call 2 28 "$monitor", "Time = %0d Ain = %b Bin = %b Cin=%b S = %b Cout = %b", $time, v0000020194f63e70_0, v0000020194f63470_0, v0000020194f63330_0, v0000020194f63510_0, v0000020194f63dd0_0 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "full_unit_add_tester.v";
+    "./Full_Unit_adder.v";
+    "./../HalfAdder/half_adder.v";

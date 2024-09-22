@@ -1,0 +1,95 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001bb48946a40 .scope module, "Tester" "Tester" 2 3;
+ .timescale 0 0;
+P_000001bb48934e60 .param/l "stop_time" 0 2 8, +C4<00000000000000000000000001100100>;
+v000001bb48992760_0 .var "I", 3 0;
+v000001bb48992300_0 .net "Y", 3 0, L_000001bb489db5b0;  1 drivers
+S_000001bb48946bd0 .scope module, "UUT" "DecToBCD" 2 9, 3 1 0, S_000001bb48946a40;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "I";
+    .port_info 1 /OUTPUT 4 "Y";
+L_000001bb48993058 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+L_000001bb48936090 .functor OR 1, L_000001bb48993058, L_000001bb489923a0, C4<0>, C4<0>;
+L_000001bb489930a0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+L_000001bb48936480 .functor OR 1, L_000001bb489930a0, L_000001bb489db510, C4<0>, C4<0>;
+L_000001bb489930e8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+L_000001bb48936170 .functor OR 1, L_000001bb489930e8, L_000001bb489db470, C4<0>, C4<0>;
+L_000001bb48993130 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+L_000001bb48936020 .functor OR 1, L_000001bb48993130, L_000001bb489dc690, C4<0>, C4<0>;
+v000001bb488b9910_0 .net "I", 3 0, v000001bb48992760_0;  1 drivers
+v000001bb48912f30_0 .net "Y", 3 0, L_000001bb489db5b0;  alias, 1 drivers
+v000001bb48913320_0 .net *"_ivl_1", 0 0, L_000001bb48936090;  1 drivers
+v000001bb48936b30_0 .net/2s *"_ivl_10", 0 0, L_000001bb489930a0;  1 drivers
+v000001bb48946d60_0 .net *"_ivl_13", 0 0, L_000001bb489db510;  1 drivers
+v000001bb48992440_0 .net *"_ivl_15", 0 0, L_000001bb48936170;  1 drivers
+v000001bb489921c0_0 .net/2s *"_ivl_17", 0 0, L_000001bb489930e8;  1 drivers
+v000001bb489924e0_0 .net *"_ivl_20", 0 0, L_000001bb489db470;  1 drivers
+v000001bb48992260_0 .net *"_ivl_22", 0 0, L_000001bb48936020;  1 drivers
+v000001bb48992580_0 .net/2s *"_ivl_25", 0 0, L_000001bb48993130;  1 drivers
+v000001bb48992620_0 .net *"_ivl_28", 0 0, L_000001bb489dc690;  1 drivers
+v000001bb489926c0_0 .net/2s *"_ivl_3", 0 0, L_000001bb48993058;  1 drivers
+v000001bb48992120_0 .net *"_ivl_6", 0 0, L_000001bb489923a0;  1 drivers
+v000001bb48992080_0 .net *"_ivl_8", 0 0, L_000001bb48936480;  1 drivers
+L_000001bb489923a0 .part v000001bb48992760_0, 0, 1;
+L_000001bb489db510 .part v000001bb48992760_0, 1, 1;
+L_000001bb489db470 .part v000001bb48992760_0, 2, 1;
+L_000001bb489db5b0 .concat8 [ 1 1 1 1], L_000001bb48936090, L_000001bb48936480, L_000001bb48936170, L_000001bb48936020;
+L_000001bb489dc690 .part v000001bb48992760_0, 3, 1;
+    .scope S_000001bb48946a40;
+T_0 ;
+    %delay 100, 0;
+    %vpi_call 2 14 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_000001bb48946a40;
+T_1 ;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v000001bb48992760_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v000001bb48992760_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v000001bb48992760_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v000001bb48992760_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 4, 0, 4;
+    %store/vec4 v000001bb48992760_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v000001bb48992760_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v000001bb48992760_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v000001bb48992760_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v000001bb48992760_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 9, 0, 4;
+    %store/vec4 v000001bb48992760_0, 0, 4;
+    %end;
+    .thread T_1;
+    .scope S_000001bb48946a40;
+T_2 ;
+    %vpi_call 2 29 "$monitor", "I = %d | Y= %b", v000001bb48992760_0, v000001bb48992760_0 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.v";
+    "./module.v";

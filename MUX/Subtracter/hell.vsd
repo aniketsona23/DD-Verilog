@@ -1,0 +1,245 @@
+$date
+	Sun Sep 08 23:07:33 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Tester $end
+$var wire 1 ! D $end
+$var wire 1 " B1 $end
+$var parameter 32 # stop_time $end
+$var reg 1 $ A $end
+$var reg 1 % B $end
+$var reg 1 & B0 $end
+$scope module UUT $end
+$var wire 1 $ A $end
+$var wire 1 % B $end
+$var wire 1 & B0 $end
+$var wire 1 ! D $end
+$var wire 1 " B1 $end
+$scope module F1 $end
+$var wire 4 ' I [3:0] $end
+$var wire 2 ( Sel [1:0] $end
+$var wire 2 ) w [1:0] $end
+$var wire 1 ! Y $end
+$scope module T1 $end
+$var wire 2 * I [1:0] $end
+$var wire 1 + S $end
+$var wire 1 , Y $end
+$upscope $end
+$scope module T2 $end
+$var wire 2 - I [1:0] $end
+$var wire 1 . S $end
+$var wire 1 / Y $end
+$upscope $end
+$scope module T3 $end
+$var wire 2 0 I [1:0] $end
+$var wire 1 1 S $end
+$var wire 1 ! Y $end
+$upscope $end
+$upscope $end
+$scope module F2 $end
+$var wire 4 2 I [3:0] $end
+$var wire 2 3 Sel [1:0] $end
+$var wire 2 4 w [1:0] $end
+$var wire 1 " Y $end
+$scope module T1 $end
+$var wire 2 5 I [1:0] $end
+$var wire 1 6 S $end
+$var wire 1 7 Y $end
+$upscope $end
+$scope module T2 $end
+$var wire 2 8 I [1:0] $end
+$var wire 1 9 S $end
+$var wire 1 : Y $end
+$upscope $end
+$scope module T3 $end
+$var wire 2 ; I [1:0] $end
+$var wire 1 < S $end
+$var wire 1 " Y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1100100 #
+$end
+#0
+$dumpvars
+0<
+b0 ;
+0:
+09
+b10 8
+07
+06
+b0 5
+b0 4
+b0 3
+b10 2
+01
+b10 0
+0/
+0.
+b10 -
+1,
+0+
+b1 *
+b10 )
+b0 (
+b110 '
+0&
+0%
+0$
+0"
+0!
+$end
+#10
+1!
+1"
+1/
+b1 )
+b1 0
+0,
+b1 4
+b1 ;
+1:
+b1 -
+b10 *
+b11 8
+b10 5
+b1001 '
+b1011 2
+1&
+#20
+1!
+b10 -
+b1 *
+b10 8
+b0 5
+0,
+1+
+b1 )
+b1 0
+1/
+1.
+07
+16
+b1 4
+b1 ;
+1:
+19
+b110 '
+b10 2
+0&
+b1 (
+b1 3
+1%
+#30
+0!
+0/
+b10 )
+b10 0
+1,
+b11 4
+b11 ;
+17
+b1 -
+b10 *
+b11 8
+b10 5
+b1001 '
+b1011 2
+1&
+#40
+b10 -
+b1 *
+b10 8
+b0 5
+1,
+0+
+b10 )
+b10 0
+0/
+0.
+07
+06
+b0 4
+b0 ;
+0:
+09
+1!
+11
+0"
+1<
+b110 '
+b10 2
+0&
+0%
+b10 (
+b10 3
+1$
+#50
+0!
+1/
+b1 )
+b1 0
+0,
+b1 4
+b1 ;
+1:
+b1 -
+b10 *
+b11 8
+b10 5
+b1001 '
+b1011 2
+1&
+#60
+0!
+0"
+b10 -
+b1 *
+b10 8
+b0 5
+0,
+1+
+b1 )
+b1 0
+1/
+1.
+07
+16
+b1 4
+b1 ;
+1:
+19
+b110 '
+b10 2
+0&
+b11 (
+b11 3
+1%
+#70
+1!
+1"
+0/
+b10 )
+b10 0
+1,
+b11 4
+b11 ;
+17
+b1 -
+b10 *
+b11 8
+b10 5
+b1001 '
+b1011 2
+1&
+#100

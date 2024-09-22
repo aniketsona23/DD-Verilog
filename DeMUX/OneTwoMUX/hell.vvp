@@ -1,0 +1,72 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000024daee6bd40 .scope module, "Tester" "Tester" 2 3;
+ .timescale 0 0;
+P_0000024daed25960 .param/l "stop_time" 0 2 8, +C4<00000000000000000000000000101000>;
+v0000024daed362d0_0 .var "I", 0 0;
+v0000024daed36370_0 .var "Sel", 0 0;
+v0000024daed7b850_0 .net "Y", 1 0, L_0000024daed7ba30;  1 drivers
+S_0000024daed36000 .scope module, "UUT" "OneTwoMux" 2 10, 3 1 0, S_0000024daee6bd40;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "I";
+    .port_info 1 /INPUT 1 "Sel";
+    .port_info 2 /OUTPUT 2 "Y";
+v0000024daed031d0_0 .net "I", 0 0, v0000024daed362d0_0;  1 drivers
+v0000024daed02f70_0 .net "Sel", 0 0, v0000024daed36370_0;  1 drivers
+v0000024daed033f0_0 .net "Y", 1 0, L_0000024daed7ba30;  alias, 1 drivers
+v0000024daee6bed0_0 .net *"_ivl_10", 0 0, L_0000024daed7bad0;  1 drivers
+v0000024daed36190_0 .net *"_ivl_3", 0 0, L_0000024daed7b8f0;  1 drivers
+v0000024daed36230_0 .net *"_ivl_5", 0 0, L_0000024daed7b990;  1 drivers
+L_0000024daed7b8f0 .reduce/nor v0000024daed36370_0;
+L_0000024daed7b990 .arith/mult 1, L_0000024daed7b8f0, v0000024daed362d0_0;
+L_0000024daed7ba30 .concat8 [ 1 1 0 0], L_0000024daed7b990, L_0000024daed7bad0;
+L_0000024daed7bad0 .arith/mult 1, v0000024daed36370_0, v0000024daed362d0_0;
+    .scope S_0000024daee6bd40;
+T_0 ;
+    %delay 40, 0;
+    %vpi_call 2 16 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0000024daee6bd40;
+T_1 ;
+    %vpi_call 2 18 "$dumpfile", "hell.vsd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000024daee6bd40 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000024daed362d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000024daed36370_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000024daed362d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000024daed36370_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000024daed362d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000024daed36370_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000024daed362d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000024daed36370_0, 0, 1;
+    %end;
+    .thread T_1;
+    .scope S_0000024daee6bd40;
+T_2 ;
+    %vpi_call 2 33 "$monitor", "I = %b Sel = %b Y0 = %b Y1 = %b", v0000024daed362d0_0, v0000024daed36370_0, &PV<v0000024daed7b850_0, 0, 1>, &PV<v0000024daed7b850_0, 1, 1> {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.v";
+    "./module.v";

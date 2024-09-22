@@ -1,0 +1,44 @@
+$date
+	Sun Sep 08 21:46:26 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Tester $end
+$var wire 2 ! Y [1:0] $end
+$var parameter 32 " stop_time $end
+$var reg 1 # I $end
+$var reg 1 $ Sel $end
+$scope module UUT $end
+$var wire 1 # I $end
+$var wire 1 $ Sel $end
+$var wire 2 % Y [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b101000 "
+$end
+#0
+$dumpvars
+b0 %
+0$
+0#
+b0 !
+$end
+#10
+1$
+#20
+0$
+b1 !
+b1 %
+1#
+#30
+b10 !
+b10 %
+1$
+#40
