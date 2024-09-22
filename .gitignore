@@ -1,5 +1,3 @@
-*/*/*.vvp
-*/*/*.vsd
-*/*/*.out
 *.out
 *.vvp
+*.vsd
