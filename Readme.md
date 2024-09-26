@@ -45,8 +45,8 @@ Welcome to the **Verilog Components Repository** created for students taking Dig
 
 1. Clone the repository:
 
-        ``` bash
-        git [text](https://github.com/aniketsona23/DD-Verilog)
+        ```bash
+        git https://github.com/aniketsona23/DD-Verilog
         ```
 
 Compile the Verilog files using your preferred Verilog simulator (e.g., Icarus Verilog, ModelSim, or Xilinx Vivado).
@@ -54,7 +54,7 @@ Compile the Verilog files using your preferred Verilog simulator (e.g., Icarus V
 Example with Icarus Verilog:
 
 
-        ``` bash
+        ```bash
         iverilog -o output_file.vvp file_name.v
         vvp output_file.vvp
         ```
