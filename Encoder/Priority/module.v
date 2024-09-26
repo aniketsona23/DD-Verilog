@@ -1,3 +1,5 @@
+// Making Priority Encoder 
+
 module FourTwo (
     input  [3:0] I,
     output [1:0] Y

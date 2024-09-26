@@ -1,3 +1,4 @@
+// Converting Octal to Binary using Encoder
 module Code(input [7:0] inp, output [7:0]out);
     or(out[0],1'b0,inp[0]);
     or(out[1],1'b0,inp[1]);

@@ -5,7 +5,5 @@ module TwoOneMux(
 
     assign Y = (!S)*I[0] + S*I[1];
     
-
-
 endmodule
 

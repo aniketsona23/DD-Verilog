@@ -1,5 +1,7 @@
 `include "../Full_Unit_Adder/Full_Unit_adder.v"
 
+// "Four Bit Full Adder" using 4 "1 Bit Full adder units"
+
 module bitfouradder(
     input [3:0] Ain,
     input [3:0] Bin,

@@ -1,5 +1,7 @@
 `include "../OneEightMUX/module.v"
 
+// 1 Bit Full Adder using "One to Eight MUX"
+
 module Code (
     input  A,
     input  B,

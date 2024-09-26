@@ -1,3 +1,5 @@
+// 1 Bit Half Adder
+
 module half_adder (
     input Ain,
     input Bin,

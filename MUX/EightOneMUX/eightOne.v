@@ -1,5 +1,7 @@
 `include "../twoOneMUX/twoOne.v"
 
+//  "Eight to One MUX" by 7 "Two to One MUX"
+
 module EightOneMux (
     input [7:0] I,
     input [2:0] Sel,

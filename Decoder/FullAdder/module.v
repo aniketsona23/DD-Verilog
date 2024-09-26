@@ -1,4 +1,7 @@
 `include "../ThreeToEight/module.v"
+
+// 1-Bit Full Adder using "Three to Eight Decoder"
+
 module Code (
     input  A,
     input  B,

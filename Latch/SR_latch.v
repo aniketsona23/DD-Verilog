@@ -1,6 +1,8 @@
+// Normal SR Latch with NAND gates using Enable
+
 module sr_latch(input enable,input S,input R,output reg Q,output reg Qn);
 
-    always @(*)
+    always @(enable, S, R)
     begin
         if(enable)
         begin

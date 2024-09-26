@@ -1,5 +1,7 @@
 `include "../fourOneMUX/fourOne.v"
 
+// Subtracter using "Four to One MUX"
+
 module Code (
     input  A,
     input  B,

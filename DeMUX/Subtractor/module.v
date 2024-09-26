@@ -1,5 +1,7 @@
 `include "../OneEightMUX/module.v"
 
+// Subtractor using One to Eight DeMUX
+
 module Code (
     input  A,
     input  B,

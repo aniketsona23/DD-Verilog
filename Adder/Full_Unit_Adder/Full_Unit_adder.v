@@ -1,5 +1,7 @@
 `include "../HalfAdder/half_adder.v"
 
+// "1 Bit Full Adder" using "Two 1 Bit Half Adder"
+
 module full_adder_unit(Ain,Bin,Cin,S,Cout);
     input Ain,Bin,Cin;
     output S,Cout;

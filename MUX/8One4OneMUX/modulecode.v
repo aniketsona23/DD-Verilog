@@ -1,5 +1,7 @@
 `include "../fourOneMUX/fourOne.v"
 
+// "Eight to One MUX" using 3 "Four to One MUX"
+
 module Code (
     input [7:0] I,
     input [2:0] Sel,

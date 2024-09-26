@@ -1,3 +1,4 @@
+// SR Latch with NOR gates without enable
 module sr_nor(input s, input r,output reg q,output reg qn);
     always @(*)
     begin

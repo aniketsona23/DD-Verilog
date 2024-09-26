@@ -1,3 +1,5 @@
+// SR Latch with NAND gates without enable
+
 module sr_nand(input s, input r,output reg q, output reg qn);
 
     always @(*)

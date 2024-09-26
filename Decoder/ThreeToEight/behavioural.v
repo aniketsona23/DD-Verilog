@@ -1,3 +1,6 @@
+
+// Three to Eight Decoder using Behavioural Code
+
 module Code (input [2:0] inp,output reg [7:0] out);
 
     always @(*)

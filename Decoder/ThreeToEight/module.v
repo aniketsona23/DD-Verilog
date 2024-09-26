@@ -1,3 +1,5 @@
+// Three to Eight Decoder using Structural code
+
 module ThreeToEight (
     input  [2:0] I,
     output [7:0] Y

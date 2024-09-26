@@ -1,5 +1,5 @@
 `include "../fourOneMUX/fourOne.v"
-
+// Full adder using Four to One MUX
 module Code (
     input  A,
     input  B,

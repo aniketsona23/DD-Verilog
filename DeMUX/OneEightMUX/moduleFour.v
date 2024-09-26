@@ -1,5 +1,7 @@
 `include "../OneFourMUX/module.v"
 
+// "One to Eight MUX" using "One to Four MUX"
+
 module OEightFOFour (
     input I,
     input [2:0] Sel,

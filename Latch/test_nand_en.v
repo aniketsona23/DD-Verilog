@@ -19,6 +19,5 @@ initial begin
     #10 en=1;s=1 ; r=1;
 end
 
-initial begin
 
 endmodule
