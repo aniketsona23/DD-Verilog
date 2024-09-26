@@ -45,18 +45,18 @@ Welcome to the **Verilog Components Repository** created for students taking Dig
 
 1. Clone the repository:
 
-        ```bash
-        git https://github.com/aniketsona23/DD-Verilog
-        ```
+```bash
+git https://github.com/aniketsona23/DD-Verilog
+```
 
 Compile the Verilog files using your preferred Verilog simulator (e.g., Icarus Verilog, ModelSim, or Xilinx Vivado).
 
 Example with Icarus Verilog:
 
-        ```bash
-        iverilog -o output_file.vvp file_name.v
-        vvp output_file.vvp
-        ```
+```bash
+iverilog -o output_file.vvp file_name.v
+vvp output_file.vvp
+```
 
 Testbench files are provided for most components to verify their functionality.
 
